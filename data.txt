@@ -1,0 +1,4 @@
+ssh theinfoyouneed@143.244.153.199
+$TheInfoYouNeeD@2022
+cd ziksalesv3.theinfoyouneed.xyz
+git pull
