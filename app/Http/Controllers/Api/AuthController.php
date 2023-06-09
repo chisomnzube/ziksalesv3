@@ -109,7 +109,7 @@ class AuthController extends Controller
                 'user' => $details
             ]);
         }else{
-            return 'false';
+            return response()->json(['message' => 'Incorrect credentials, check your credentials and try again!']);
         }
         
     }
