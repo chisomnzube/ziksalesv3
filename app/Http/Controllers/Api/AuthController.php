@@ -56,7 +56,7 @@ class AuthController extends Controller
                 "email" => $user->email, 
                 "name" => $user->name,
                 "phone" => $user->phone, 
-                "state" => $user->state,
+                "address" => $user->address,
                 "image" => $user->avatar,
             );
         
@@ -88,6 +88,7 @@ class AuthController extends Controller
             
             $details = array(
                 "id" => auth()->user()->id, 
+                "name" => auth()->user()->name,
                 "email" => auth()->user()->email,
                 "phone" => auth()->user()->phone, 
                 "address" => auth()->user()->address,
