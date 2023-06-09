@@ -63,6 +63,7 @@ class AuthController extends Controller
         // $result =  json_encode($details);
         // return $result;
         return response()->json([
+                'message' => 'success',
                 'token' => $token,
                 'user' => $details
             ]);
@@ -83,7 +84,7 @@ class AuthController extends Controller
         if ($auth) {
             $checkDelete = DeletedUser::where('user_id', auth()->user()->id)->first();
             if ($checkDelete) {
-                return 'false';
+                return response()->json(['message' => 'Invalid account!']);
             }
             
             $details = array(
@@ -103,6 +104,7 @@ class AuthController extends Controller
             // $result =  json_encode($details);
             // return $result;
             return response()->json([
+                'message' => 'success',
                 'token' => $token,
                 'user' => $details
             ]);
@@ -177,7 +179,10 @@ class AuthController extends Controller
 
         
 
-        return response()->json(['image' => $userImage]);
+        return response()->json([
+            'message' => 'success',
+            'image' => $userImage
+        ]);
     }
 
 
@@ -192,6 +197,6 @@ class AuthController extends Controller
             ]);
         }
 
-        return response()->json(['messgae' => true]);
+        return response()->json(['message' => 'success']);
     }
 }
