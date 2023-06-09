@@ -22,20 +22,14 @@ class AuthController extends Controller
      */
     public function register(Request $request)
     {
-        $request->validate([
-            'name' => 'required',
-            'email'    => 'required',
-            'password' => 'required',
-            'phone' => 'required',
-            'address' => 'required',
-        ]);        
+        $data = json_decode($request->data);       
 
         
-        $name = $request->name;
-        $email    = $request->email;
-        $password = $request->password;
-        $phone = $request->phone;
-        $address = $request->address;
+        $name = $data->name;
+        $email    = $data->email;
+        $password = $data->password;
+        $phone = $data->phone;
+        $address = $data->address;
 
         //let's check if the email is already taken
         $check = User::where('email', $email)->first();
@@ -76,8 +70,10 @@ class AuthController extends Controller
     }
 
     public function login(Request $request){
-        $email = $request->email;
-        $password = $request->password;
+        $data = json_decode($request->data);
+
+        $email = $data->email;
+        $password = $data->password;
 
         $auth = Auth::attempt([
             'email'=> $email, 
