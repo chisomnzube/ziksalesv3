@@ -44,6 +44,12 @@ Route::prefix('section')->group(function(){
 
     Route::get('/shops/{section_id}', [SectionsController::class, 'shops']);    
 
+    Route::get('/banners', [SectionsController::class, 'banners']);
+
+    Route::get('/flash-sales', [SectionsController::class, 'flashSales']);
+
+    Route::get('/still-available', [SectionsController::class, 'stillAvailable']);
+
 });
 
 //route for product

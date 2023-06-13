@@ -45,6 +45,7 @@ return array(
     'App\\Mail\\RatingMail' => $baseDir . '/app/Mail/RatingMail.php',
     'App\\Mail\\WelcomeMail' => $baseDir . '/app/Mail/WelcomeMail.php',
     'App\\Models\\AdminData' => $baseDir . '/app/Models/AdminData.php',
+    'App\\Models\\Banner' => $baseDir . '/app/Models/Banner.php',
     'App\\Models\\DeletedUser' => $baseDir . '/app/Models/DeletedUser.php',
     'App\\Models\\Membership' => $baseDir . '/app/Models/Membership.php',
     'App\\Models\\Order' => $baseDir . '/app/Models/Order.php',

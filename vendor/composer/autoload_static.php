@@ -667,6 +667,7 @@ class ComposerStaticInitc9b77631917fdc6ed622f227f2693051
         'App\\Mail\\RatingMail' => __DIR__ . '/../..' . '/app/Mail/RatingMail.php',
         'App\\Mail\\WelcomeMail' => __DIR__ . '/../..' . '/app/Mail/WelcomeMail.php',
         'App\\Models\\AdminData' => __DIR__ . '/../..' . '/app/Models/AdminData.php',
+        'App\\Models\\Banner' => __DIR__ . '/../..' . '/app/Models/Banner.php',
         'App\\Models\\DeletedUser' => __DIR__ . '/../..' . '/app/Models/DeletedUser.php',
         'App\\Models\\Membership' => __DIR__ . '/../..' . '/app/Models/Membership.php',
         'App\\Models\\Order' => __DIR__ . '/../..' . '/app/Models/Order.php',
