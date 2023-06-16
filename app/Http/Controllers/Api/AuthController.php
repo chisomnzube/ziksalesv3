@@ -72,6 +72,7 @@ class AuthController extends Controller
 
     public function login(Request $request){
         $data = json_decode($request->data);
+        // $data = (object)$request;
 
         $email = $data->email;
         $password = $data->password;

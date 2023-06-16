@@ -18,9 +18,9 @@ class PaymentsController extends Controller
         $token = JWTAuth::parseToken();
         $user = $token->authenticate();
 
-        // $metadata = json_decode($request->data);
+        $metadata = json_decode($request->data);
         // return $metadata->type;
-        $metadata = $request->data;
+        // $metadata = $request->data;
         // dd(json_decode($request->data, true));
         
         $TotalPaid = $metadata->total;
