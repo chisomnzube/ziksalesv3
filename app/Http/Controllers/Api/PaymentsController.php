@@ -20,7 +20,7 @@ class PaymentsController extends Controller
 
         // $metadata = json_decode($request->data);
         // return $metadata->type;
-        $metadata = $request;
+        $metadata = $request->data;
         // dd(json_decode($request->data, true));
         
         $TotalPaid = $metadata->total;
@@ -79,7 +79,7 @@ class PaymentsController extends Controller
 
         //Mail::send(new OrderPlaced($order));
         // OrderEmailJob::dispatch($order)->delay(now()->addSeconds(2));
-        Mail::send(new OrderMail($order));
+        // Mail::send(new OrderMail($order));
         
         return response()->json(["message" => true ]);
     }
