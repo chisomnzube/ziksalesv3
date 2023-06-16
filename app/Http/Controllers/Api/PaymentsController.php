@@ -24,14 +24,7 @@ class PaymentsController extends Controller
         // dd(json_decode($request->data, true));
         
         $TotalPaid = $metadata->total;
-        $altaddress = $metadata->altaddress;
-        if ($altaddress == NULL) 
-            {
-                $mainAddress = $metadata->address;
-            }else
-                {
-                    $mainAddress = $altaddress;
-                }
+        $mainAddress = $metadata->address;
         
         
         //Insert into orders table
@@ -46,8 +39,8 @@ class PaymentsController extends Controller
                 'total' => $TotalPaid,
             ]);
             
-            $productId = $metadata->product_id;
-            $productQty = $metadata->product_qty;
+            $productId = $metadata->prod_ids;
+            $productQty = $metadata->prod_qtys;
             
             // dd($productId);
             $countItem = count($productId);
