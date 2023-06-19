@@ -63,6 +63,9 @@ Route::prefix('product')->group(function(){
 
     Route::get('/shop/{shop_id}', [ProductsController::class, 'shopProducts']);
 
+    Route::get('/d/search', [ProductsController::class, 'productSearch']);
+
+    Route::get('/details/{id}', [ProductsController::class, 'productDetails']);
 });
 
 

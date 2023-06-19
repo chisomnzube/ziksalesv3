@@ -67,12 +67,10 @@ class RatingController extends Controller
         ]);
 
 
-        Review::create([
-            'rating' => $request->input('rating'),  
+        $rating->update([
+            'star' => $request->input('rating'),  
             'review' => $request->input('review'),  
-            'user_id' => $rating->user_id,  
-            'order_id' => $rating->order_id,  
-            'token' =>  $request->input('Thetoken'),
+            'remit' => 1,
         ]);
 
         return redirect()->route('landingpage')->with([
