@@ -33,8 +33,7 @@ class RatingController extends Controller
                 return redirect()->route('landingpage')->with('success_message', 'Invalid Token!');
             }
 
-        $checkRating = Review::where('token', $token)->get()->count();
-        if ($checkRating > 0) 
+        if ($rating->remit == 1) 
             {
                 return redirect()->route('landingpage')->with('success_message', 'You have already rated the product');
             }

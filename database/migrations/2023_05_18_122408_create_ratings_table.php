@@ -20,7 +20,10 @@ class CreateRatingsTable extends Migration
             $table->string('user_email');
             $table->integer('product_id');
             $table->text('token');
+            $table->double('star')->nullable();
+            $table->text('review')->nullable();
             $table->boolean('sent')->default(false);
+            $table->boolean('remit')->default(false);
             $table->timestamps();
         });
     }
