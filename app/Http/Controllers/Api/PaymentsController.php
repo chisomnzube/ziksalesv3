@@ -58,6 +58,7 @@ class PaymentsController extends Controller
                         'order_id' => $order->id,
                         'user_id' => $user->id,
                         'user_email' => $user->email,
+                        'user_name' => $user->name,
                         'product_id' => $productId[$h],
                         'token' => 'rating'.time().'token'.$productId[$h],
                     ]);

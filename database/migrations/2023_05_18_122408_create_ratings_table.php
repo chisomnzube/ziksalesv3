@@ -18,6 +18,7 @@ class CreateRatingsTable extends Migration
             $table->integer('order_id');
             $table->integer('user_id');
             $table->string('user_email');
+            $table->string('user_name');
             $table->integer('product_id');
             $table->text('token');
             $table->double('star')->nullable();
