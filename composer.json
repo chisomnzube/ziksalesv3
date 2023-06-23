@@ -16,7 +16,8 @@
         "livewire/livewire": "^2.5",
         "tcg/voyager": "^1.6",
         "tymon/jwt-auth": "^1.0",
-        "nicolaslopezj/searchable": "^1.10"
+        "nicolaslopezj/searchable": "^1.10",
+        "intervention/image": "^2.5"
     },
     "require-dev": {
         "facade/ignition": "^2.5",

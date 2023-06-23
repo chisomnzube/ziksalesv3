@@ -10,6 +10,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
+use Intervention\Image\Facades\Image;
 use Tymon\JWTAuth\Facades\JWTAuth;
 
 class AuthController extends Controller
@@ -129,7 +130,7 @@ class AuthController extends Controller
         // dd($user->id);
          // $user = User::find($id);
 
-         $input = $request->except('password', 'password_confirmation');
+         $input = $request->except('password', 'password_confirmation', 'image');
          if (! $request->filled('password')) 
              {
                 $user->fill($input)->save();
@@ -167,8 +168,8 @@ class AuthController extends Controller
                 
                 $userImage = 'users/'.$fileNameToStore;
 
-                $d_user = User::find($id);
-                $d_user->update([
+                // $d_user = User::find($id);
+                $user->update([
                     'avatar' => $userImage,
                 ]);
             }else{
