@@ -189,7 +189,7 @@ class AuthController extends Controller
 
 
 
-    public function deleteUser(){
+    public function deleteUser(Request $request){
         $token = JWTAuth::parseToken();
         $user = $token->authenticate();
 

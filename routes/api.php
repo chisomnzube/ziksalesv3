@@ -91,7 +91,7 @@ Route::middleware('jwt.auth')->group(function () {
 
         Route::post('/update', [AuthController::class, 'update']);
 
-        Route::get('/delete-user', [AuthController::class, 'deleteUser']);
+        Route::post('/delete-user', [AuthController::class, 'deleteUser']);
 
     });
 });
